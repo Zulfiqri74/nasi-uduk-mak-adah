@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NASI UDUK MAK ADAH</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <button id="toggleDark" aria-label="Toggle Dark" style="position: absolute; top: 20px; right: 20px; padding: 10px 15px; cursor: pointer;">
+        🌙 Dark Mode
+    </button>
+    <img src="banner.png" alt="Banner Nasi Uduk Mak Adah" class="banner-image" />
+</header>
+
+<nav>
+    <a href="#home">Beranda</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Kontak</a>
+</nav>
+
+<main>
+    <section id="home" data-aos="fade-up">
+        <h2 class="welcome-text" data-aos="zoom-in">Selamat Datang di WEB resmi Nasi Uduk Mak Adah!</h2>
+        <div class="featured-row">
+            <img src="Nasiuduk.jpg" alt="Nasi Uduk" class="featured-image" />
+            <img src="Komplit.jpg" alt="Komplit" class="featured-image" />
+            <img src="Ayamgoreng.jpg" alt="Ayam Goreng" class="featured-image" />
+        </div>
+        <p>Nasi uduk adalah makanan khas dari Indonesia yang sangat diminati oleh masyarakat Indonesia. </p>
+        <p>Di sini, kami menyajikan nasi uduk dengan citarasa autentik dan lauk pauk pilihan yang menggugah selera yang dibuat dengan sepenuh hati dan pastinya dibuat dengan Cinta. Nikmati makanan tradisional dengan suasana yang hangat dan penuh cinta dari Mak Adah.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu Favorit</h2>
+        <article class="menu-item" data-aos="fade-right">
+            <h3>Nasi Uduk Komplit</h3>
+            <p>Nasi uduk dengan lauk ayam goreng, telur balado, bihun, gorengan tahu, gorengan tempe, gorengan bakwan, dan sambal kacang khas dari Mak Adah.</p>
+            <img src="Komplit.jpg" alt="Nasi Uduk Komplit" class="menu-image" />
+        </article>
+        <div class="menu-item" data-aos="fade-left">
+            <h3>Nasi Uduk Ayam Goreng</h3>
+            <p>Nasi uduk dengan ayam goreng yang kuat akan bumbu rempah dan sambal yang pedas, manis, gurih, yang pasti mantap untuk dipadukan dengan lauk nasi uduk.</p>
+            <img src="Ayamgoreng.jpg" alt="Nasi Uduk Ayam Goreng" class="menu-image" />
+        </div>
+        <div class ="menu-item" data-aos="fade-right">
+            <h3>Nasi uduk telur balado pedas.</h3>
+            <p> Nasi uduk yang disediakan dengan Telur balado yang menggugah selera, dari segi tampilan serta rasa dijamin tidak mengecewakan.</p>
+            <img src="Telur.jpg" alt="Nasi Uduk Telur Balado" class="menu-image" />
+        </div>
+        <div class ="menu-item" data-aos="fade-left">
+            <h3>Gorengan Hangat.</h3>
+            <p>Aneka gorengan yang di sediakan dalam kondisi hangat serta dibuat dengan bahan yang berkualitas dan fresh.</p>
+            <img src="Gorengan.jpeg" alt="Gorengan Hangat" class="menu-image" />
+        </div> 
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Jika Anda ingin memesan atau memiliki pertanyaan, silakan isi formulir di bawah ini:</p>
+        <form class="contact-form" id="contactForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button id="toggleDark" class=""btn btn-dark>Kirim</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+        © 2025 Nasi Uduk Mak Adah - HAK CIPTA DILINGUNGI
+</footer>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script  src="script.js"></script>
+<div id="popupMessage" class="popup">
+    <div class="popup-content">
+        <p>✅ Terima kasih! Pesan Anda telah terkirim.</p>
+        <button onclick="closePopup()">Tutup</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: #F4C37D;
+    color: #000000;
+}
+header {
+    background-color: #0e3ba279;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav a {
+    color:#01014b;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: color 0.35s, transform 0.35s ease;
+}
+nav a:hover {
+    color: #eb0f0fbb;
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+h2 {
+    color: #000000;
+    border-bottom: 2px solid #6943ff33;
+    padding-bottom: 5px;
+}
+h3 {
+    color: #000000;
+}
+.menu-item {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #0e3ba279;
+    color: white;
+    text-align: center;
+    padding: 15px 100px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.contact-form button {
+    margin-top: 15px;
+    background-color: #fcb29b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #d84315;
+}
+.message-sent {
+    color: green;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.featured-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+.welcome-text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0c054d;
+    margin-bottom: 20px;
+}
+.menu-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 100px;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.banner-image {
+    width: 100%;
+    max-height: 270px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+.featured-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+section {
+    animation: fadeIn 0.8s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .featured-row {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .menu-image {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    header {
+        font-size: 1.8rem;
+    }
+}
+nav {
+    text-align: center;
+    background-color: #fcb29b;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.popup-content button {
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #fcb29b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border: 1px solid #555;
+
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.dark-mode .menu-item,
+.dark-mode .contact-form,
+.dark-mode .featured-row {
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dark-mode .popup-content {
+    background-color: #2e2e2e; 
+    color: #ffffff;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #666;
+}
+
